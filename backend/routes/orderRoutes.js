@@ -1,0 +1,10 @@
+const express=require("express");
+const router=express.Router();
+const userMiddleware=require("../middleware/cartMiddleware");
+const {placeOrder,placeOrderStripe,placeOrderRazorpay,allOrders,userOrders} =require("../controllers/orderController");
+router.post("/pace",userMiddleware,placeOrder);
+router.post("/stripe",userMiddleware,placeOrderStripe);
+router.post("/razor",userMiddleware,placeOrderRazorpay);
+router.post("/list",userMiddleware,allOrders);
+router.post("/myorders",userMiddleware,userOrders);
+module.exports=router;
