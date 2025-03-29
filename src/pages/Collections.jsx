@@ -7,7 +7,7 @@ import ProductItem from "../components/ProductItem";
 import { setIsSearchOpen } from "../utils/homeSlice";
 import axios from "axios";
 const Collections = () => {
-  const url = "http://localhost:5000/product/list";
+  const url = "https://ecart-backend-4.onrender.com/product/list";
   
   const products=useSelector(store=>store.home.products);
   const dispatch = useDispatch(); // ✅ Import useDispatch
