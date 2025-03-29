@@ -15,7 +15,7 @@ const Home = () => {
   const toggleSearch = () => {
       dispatch(setIsSearchOpen());
     };
-    const url = "http://localhost:5000/product/list";
+    const url = "https://ecart-backend-4.onrender.com/product/list";
      const [products, setProducts] = useState([]);
      const fetchData = async () => {
        const response = await axios.get(url);
