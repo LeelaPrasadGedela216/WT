@@ -13,7 +13,7 @@ const SignIn = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    const url ="http://localhost:5000/auth/signin"
+    const url ="https://ecart-backend-4.onrender.com/auth/signin"
     try {
       const response = await fetch(url, {
         method: "POST",
